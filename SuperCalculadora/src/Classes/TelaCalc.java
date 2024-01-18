@@ -162,11 +162,6 @@ public class TelaCalc extends JFrame {
 				int abs = Math.abs(num);
 				lblAbs.setText(Integer.toString(abs));
 				
-				
-				
-				
-				
-				
 			}
 		});
 		btnCalc.setFont(new Font("Monospaced", Font.BOLD, 12));
