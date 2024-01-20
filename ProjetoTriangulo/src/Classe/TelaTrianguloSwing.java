@@ -45,6 +45,8 @@ public class TelaTrianguloSwing extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 605, 456);
 		contentPane = new JPanel();
+		contentPane.setForeground(new Color(228, 228, 231));
+		contentPane.setBackground(new Color(228, 228, 231));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -87,6 +89,8 @@ public class TelaTrianguloSwing extends JFrame {
 		contentPane.add(lblC);
 		
 		JSlider sliA = new JSlider();
+		sliA.setBackground(new Color(228, 228, 231));
+		sliA.setForeground(new Color(228, 228, 231));
 		sliA.setMaximum(20);
 		sliA.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
@@ -95,10 +99,12 @@ public class TelaTrianguloSwing extends JFrame {
 			
 		});
 		sliA.setValue(0);
-		sliA.setBounds(121, 50, 134, 14);
+		sliA.setBounds(121, 51, 134, 14);
 		contentPane.add(sliA);
 		
 		JSlider sliB = new JSlider();
+		sliB.setBackground(new Color(228, 228, 231));
+		sliB.setForeground(new Color(228, 228, 231));
 		sliB.setMaximum(20);
 		sliB.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
@@ -110,6 +116,8 @@ public class TelaTrianguloSwing extends JFrame {
 		contentPane.add(sliB);
 		
 		JSlider sliC = new JSlider();
+		sliC.setBackground(new Color(228, 228, 231));
+		sliC.setForeground(new Color(228, 228, 231));
 		sliC.setMaximum(20);
 		sliC.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
@@ -136,6 +144,7 @@ public class TelaTrianguloSwing extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JPanel panVisual = new JPanel();
+		panVisual.setBackground(new Color(228, 228, 231));
 		panVisual.setBounds(0, 252, 577, 153);
 		contentPane.add(panVisual);
 		panVisual.setLayout(null);
@@ -163,7 +172,7 @@ public class TelaTrianguloSwing extends JFrame {
 		
 		JLabel lblNewLabel_3 = new JLabel("");
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Ricardo\\Desktop\\Curso em video Java Basico\\Imagens curos em video\\Projeto Tela Triangulo\\triangulo(1).png"));
+		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Ricardo\\Desktop\\Curso em video Java Basico\\Imagens curos em video\\Projeto Tela Triangulo\\Triangulo.png"));
 		lblNewLabel_3.setBounds(352, 12, 225, 228);
 		contentPane.add(lblNewLabel_3);
 		
