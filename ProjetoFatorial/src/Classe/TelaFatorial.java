@@ -44,7 +44,7 @@ public class TelaFatorial extends JFrame {
 		setModalExclusionType(ModalExclusionType.APPLICATION_EXCLUDE);
 		setTitle("                                      Calculo de Fatorial");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 443, 266);
+		setBounds(100, 100, 439, 383);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(232, 232, 232));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -52,16 +52,16 @@ public class TelaFatorial extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel_2 = new JLabel("verifique aqui");
-		lblNewLabel_2.setFont(new Font("Monospaced", Font.BOLD, 13));
+		JLabel lblNewLabel_2 = new JLabel("De 1 a 12");
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(27, 75, 128, 14);
+		lblNewLabel_2.setFont(new Font("Monospaced", Font.PLAIN, 13));
+		lblNewLabel_2.setBounds(34, 77, 111, 16);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel(" Fatorial !");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_1.setFont(new Font("Monospaced", Font.BOLD, 13));
-		lblNewLabel_1.setBounds(27, 47, 104, 18);
+		lblNewLabel_1.setBounds(24, 47, 121, 18);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
@@ -73,34 +73,52 @@ public class TelaFatorial extends JFrame {
 		JLabel lblNewLabel_3 = new JLabel("! = ");
 		lblNewLabel_3.setFont(new Font("Dialog", Font.PLAIN, 18));
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_3.setBounds(276, 47, 40, 28);
+		lblNewLabel_3.setBounds(268, 47, 40, 28);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblFat = new JLabel("1");
 		lblFat.setForeground(new Color(255, 0, 0));
 		lblFat.setHorizontalAlignment(SwingConstants.LEFT);
-		lblFat.setFont(new Font("Dialog", Font.BOLD, 17));
-		lblFat.setBounds(311, 47, 104, 28);
+		lblFat.setFont(new Font("Dialog", Font.BOLD, 18));
+		lblFat.setBounds(300, 47, 121, 28);
 		contentPane.add(lblFat);
 		
+		JLabel lblResultado = new JLabel("Esquema do Tutorial");
+		lblResultado.setHorizontalAlignment(SwingConstants.CENTER);
+		lblResultado.setFont(new Font("Monospaced", Font.BOLD, 13));
+		lblResultado.setBounds(6, 262, 403, 72);
+		contentPane.add(lblResultado);
+		lblResultado.setVisible(false);
+		
 		JSpinner txtNumero = new JSpinner();
-		txtNumero.setModel(new SpinnerNumberModel(0, 0, 12, 1));
 		txtNumero.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
+				lblResultado.setVisible(true);
 				int numero = Integer.parseInt(txtNumero.getValue().toString());
-				// PROGRAMANDO PARA CRIAR O FACTORIAL
 				int fatorial = 1;
 				int contador = numero;
+				
+				// MOSTRANDO OS DETALHES DO FATORIAL 
+				String detalhe = "";
+				
 				while(contador >= 1) {
 					fatorial *= contador;
+					detalhe += contador + "*";
 					contador--;
+					
 				}
 				lblFat.setText(Integer.toString(fatorial));
-				
+				lblResultado.setText(" N! = " + detalhe + " : " + fatorial);
 			}
 		});
-		txtNumero.setFont(new Font("Dialog", Font.PLAIN, 16));
-		txtNumero.setBounds(228, 47, 52, 28);
+		txtNumero.setModel(new SpinnerNumberModel(0, 0, 12, 1));
+		txtNumero.setBounds(230, 42, 40, 33);
 		contentPane.add(txtNumero);
+		
+		JLabel lblNewLabel_4 = new JLabel("Detalhes do fatorial:");
+		lblNewLabel_4.setForeground(new Color(0, 0, 160));
+		lblNewLabel_4.setFont(new Font("Monospaced", Font.BOLD, 18));
+		lblNewLabel_4.setBounds(6, 228, 319, 28);
+		contentPane.add(lblNewLabel_4);
 	}
 }
