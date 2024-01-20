@@ -167,18 +167,18 @@ public class TelaTrianguloSwing extends JFrame {
 		lblNewLabel_3.setBounds(352, 12, 225, 228);
 		contentPane.add(lblNewLabel_3);
 		
-		JButton btnNewButton = new JButton("Veificar");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnVerificar = new JButton("Verificar");
+		btnVerificar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panVisual.setVisible(true);
-				int a = sliA.getValue();
-				int b = sliB.getValue();
-				int c = sliC.getValue();
-				if(b < a + c && a < b + c && c < a + b) {
+				int anguloa = sliA.getValue();
+				int angulob = sliB.getValue();
+				int anguloc = sliC.getValue();
+				if(angulob < anguloa + anguloc && anguloa < angulob + anguloc && anguloc < anguloa + angulob) {
 					lblResultado.setText(" Forma um triangulo !");
-					if(a == b && b == c) {
+					if(anguloa == angulob && angulob == anguloc) {
 						lblTipo.setText("TIpo Triangulo Equilátero");
-					}else if(a != b && b != c && a != c ) {
+					}else if(anguloa != angulob && angulob != anguloc && anguloa != anguloc ) {
 						lblTipo.setText("Tipo de Triangulo Escaleno");
 					}else {
 						lblTipo.setText("Tipo de Triangulo Isosceles ");
@@ -189,8 +189,8 @@ public class TelaTrianguloSwing extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setFont(new Font("Monospaced", Font.BOLD, 16));
-		btnNewButton.setBounds(89, 157, 149, 37);
-		contentPane.add(btnNewButton);
+		btnVerificar.setFont(new Font("Monospaced", Font.BOLD, 17));
+		btnVerificar.setBounds(89, 157, 149, 37);
+		contentPane.add(btnVerificar);
 	}
 }
