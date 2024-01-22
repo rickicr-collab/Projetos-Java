@@ -36,9 +36,9 @@ public class RepetiçãoFor {
 		System.out.println("------ Sexto Exemplo ------- ");
 		//EXEMPLO 6
 		for(int i = 1;i <= 3;i++) {
-			System.out.println(i);
+			System.out.println("Valor de i: " + i);
 			for(int j = 0;j <= 2;j+=2) {
-				System.out.println(j);
+				System.out.println("Valor de j: " + j);
 			}
 		}
 		
