@@ -24,7 +24,7 @@ public class ExercicioRe2 {
 			numero = Integer.parseInt(JOptionPane.showInputDialog(null, 
 					"<html>Informe um Número: <br><em>(valor 0 → para interromper)</em></html>"));
 			
-			if(numero % 2 == 0) {
+			if(numero % 2 == 0 && numero !=0) {
 				par++;
 			}
 			if(numero % 2 == 1 && numero != 0) {
@@ -41,8 +41,7 @@ public class ExercicioRe2 {
 		}while(numero != 0);
 		DecimalFormat num = new DecimalFormat("#");
 		media = soma / contador;
-		JOptionPane.showMessageDialog(null," - Resultado Final - \n" +
-										   "--------------------------- \n" + 
+		JOptionPane.showMessageDialog(null,"--------------------------- \n" + 
 										   "\n Total de valores : " + contador +
 										   "\n Total de Pares : " + par +
 										   "\n Total de Impares : " + impar +
