@@ -48,7 +48,6 @@ public class ExercicioRe2 {
 										   "\n Soma dos Valores : " + soma +
 										   "\n Acima de Cem: " + acimadecem +
 										   "\n Media dos Valores : " +num.format(media),"Resultado",JOptionPane.INFORMATION_MESSAGE);
-
 	}
 
 }
